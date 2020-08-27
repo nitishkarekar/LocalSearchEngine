@@ -1,0 +1,4 @@
+A13 Bionic
+Snapdragon 730
+Snapdragon 835
+Exynos 990
