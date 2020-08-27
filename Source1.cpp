@@ -22,7 +22,6 @@ public:
 		ph2 = p2;
 		ph3 = p3;
 		ph4 = p4;
-		cout<<ph1;
 	}
 }Ram;
 class battery {
@@ -69,7 +68,7 @@ public:
 int main() {
 	char name1[100], name2[100], name3[100], name4[100];
 	char SoC1[100], SoC2[100], SoC3[100], SoC4[100];
-	int ram1, ram2, ram3, ram4;
+	int ram1 = 0, ram2 = 0, ram3 = 0, ram4 = 0;
 
 	ofstream nameOut;
 	nameOut.open("name.txt");
@@ -87,7 +86,6 @@ int main() {
 	ramOut.open("RAM.txt");
 	Ram.get(ram1, ram2, ram3, ram4);
 	ramOut << ram1 << "\n" << ram2 << "\n" << ram3 << "\n" << ram4;
-	cout << ram1 << "\n" << ram2 << "\n" << ram3 << "\n" << ram4;
 	ramOut.close();
 
 	ifstream nameIn, SoCIn, ramIn;
@@ -96,14 +94,14 @@ int main() {
 	SoCIn.open("SoC.txt");
 
 	string search;
-	cout << "enter the name of the phone: ";
+	cout << "Enter the name of the phone: ";
 	cin >> search;
 
 	bool isFound = 0;
 
 	while (!nameIn.eof()) {
 		string showName = "", showSoC = "";
-		int showRam;
+		int showRam = 1;
 		getline(nameIn, showName);
 		getline(SoCIn, showSoC);
 		ramIn >> showRam;
@@ -122,7 +120,7 @@ int main() {
 			cout<<"\n";
 			for (int i = 0; i < showSoC.size(); i++)
 				cout << showSoC[i];
-			cout<<"\nRam:" << showRam;
+			cout<<"\nRam: " << showRam << "GB";
 			cout<<"\n";
 			break;
 		}
@@ -133,4 +131,5 @@ int main() {
 
 	nameIn.close();
 	SoCIn.close();
+	ramIn.close();
 }
