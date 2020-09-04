@@ -1,4 +1,6 @@
 A13 Bionic
+A13 Bionic
 Snapdragon 730
 Snapdragon 835
 Exynos 990
+Snapdragon 675

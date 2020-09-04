@@ -1,0 +1,35 @@
+Name: OnePlus 7
+Soc: Snapdragon 855
+RAM: 8GB
+Battery: 3700mAh
+Screen Size: 6.41 inch
+MegaPixel: 48MP
+1
+Name: OnePlus 7 Pro
+Soc: Snapdragon 855
+RAM: 12GB
+Battery: 4000mAh
+Screen Size: 6.67 inch
+MegaPixel: 48MP
+2
+Name: OnePlus 8
+Soc: Snapdragon 865
+RAM: 12GB
+Battery: 4300mAh
+Screen Size: 6.55 inch
+MegaPixel: 48MP
+3
+Name: OnePlus 8 Pro
+Soc: Snapdragon 865
+RAM: 12GB
+Battery: 4510mAh
+Screen Size: 6.78 inch
+MegaPixel: 48MP
+4
+Name: OnePlus Nord
+Soc: Snapdragon 765G
+RAM: 12GB
+Battery: 4115mAh
+Screen Size: 6.44 inch
+MegaPixel: 48MP
+5

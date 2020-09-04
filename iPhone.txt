@@ -1,0 +1,36 @@
+Name: iPhone 11 Pro Max
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3000mAh
+Screen size: 6.52 inch
+MegaPixel: 12MP
+1
+Name: iPhone 11 Pro
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3046mAh
+Screen size: 5.8 inch
+MegaPixel: 12MP
+2
+Name: iPhone 11
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3110mAh
+Screen Size: 6.1 inch
+MegaPixel: 12MP
+3
+Name: iPhone XR
+Soc: A12 Bionic
+RAM: 3GB
+Battery: 2942mAh
+Screen Size: 6.1 inch
+MegaPixel: 12MP
+4
+Name: iPhone X
+Soc: A11 Bionic
+RAM: 3GB
+Battery: 2716mAh
+Screen Size: 5.8 inch
+MegaPixel: 12MP
+5
+

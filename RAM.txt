@@ -1,4 +1,6 @@
 4GB
 3GB
+3GB
 6GB
 12GB
+4GB

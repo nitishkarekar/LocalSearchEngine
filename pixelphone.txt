@@ -1,0 +1,35 @@
+Name: Pixel 4A
+Soc: Snapdragon 730G
+RAM: 6GB
+Battery: 3140mAh 
+Screen Size: 5.81 inch
+MegaPixel: 12MP
+1
+Name: Pixel 4 XL
+Soc: Snapdragon 855
+RAM: 6GB
+Battery: 3700mAh 
+Screen Size: 6.3 inch
+MegaPixel: 16MP
+2
+Name: Pixel 4
+Soc: Snapdragon 855
+RAM: 6GB
+Battery: 2800mAh 
+Screen Size: 5.7 inch
+MegaPixel: 16MP
+3
+Name: Pixel 3A XL
+Soc: Snapdragon 845
+RAM: 4GB
+Battery: 3430mAh 
+Screen Size: 6.3 inch
+MegaPixel: 12MP
+4
+Name: Pixel 3A
+Soc: Snapdragon 670
+RAM: 4GB
+Battery: 3000mAh 
+Screen Size: 5.6 inch
+MegaPixel: 12MP
+5

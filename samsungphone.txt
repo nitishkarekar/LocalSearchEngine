@@ -1,0 +1,35 @@
+Name: Samsung Galaxy S20
+Soc: Exynos 990
+RAM: 8GB
+Battery: 4000mAh 
+Screen Size: 6.2 inch
+MegaPixel: 64MP
+1
+Name: Samsung Galaxy S20+
+Soc: Exynos 990
+RAM: 8GB
+Battery: 4500mAh 
+Screen Size: 6.7 inch
+MegaPixel: 64MP
+2
+Name: Samsung Galaxy Z Fold 2
+Soc: Snapdragon 865+
+RAM: 12GB
+Battery: 4500mAh 
+Screen Size: 7.6 inch
+MegaPixel: 12MP
+3
+Name: Samsung Galaxy M21
+Soc: Exynos 9611
+RAM: 6GB
+Battery: 6000mAh 
+Screen Size: 6.4 inch
+MegaPixel: 48MP
+4
+Name: Samsung Galaxy A31
+Soc: Helio P65
+RAM: 6GB
+Battery: 5000mAh 
+Screen Size: 6.4 inch
+MegaPixel: 48MP
+5

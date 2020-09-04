@@ -3,7 +3,6 @@
 #include<fstream>
 #include<cstring>
 #include <string>
-#include<string.h>
 using namespace std;
 
 class screenSize {
@@ -79,108 +78,811 @@ int main() {
 	char ram1[5], ram2[5], ram3[5], ram4[5];
 	char battery1[10], battery2[10], battery3[10], battery4[10];
 	char MP1[10], MP2[10], MP3[10], MP4[10];
+	int c, brand;
+	cout<<"Select 1 or 2: \n1)Search by name \n2)Search by brand."<<endl;
+	cin >> c;
+	switch(c) {
+		case 1: 
+		{		
+				ifstream nameIn, SoCIn, ramIn, screenIn, batteryIn, MPIn;
+				nameIn.open("name.txt");
+				SoCIn.open("SoC.txt");
+				ramIn.open("RAM.txt");
+				screenIn.open("ScreenSize.txt");
+				batteryIn.open("Battery.txt");
+				MPIn.open("MegaPixels.txt");
 
-	ofstream nameOut;
-	nameOut.open("name.txt");
-	name.getName(name1, name2, name3, name4);
-	nameOut << name1 << "\n" << name2 << "\n" << name3 << "\n" << name4;
-	nameOut.close();
+				string search;
+				cout << "Enter the name of the phone: ";
+				cin >> search;
 
-	ofstream SoCOut;
-	SoCOut.open("SoC.txt");
-	SoC.getSoC(SoC1, SoC2, SoC3, SoC4);
-	SoCOut << SoC1 << "\n" << SoC2 << "\n" << SoC3 << "\n" << SoC4;
-	SoCOut.close();
+				bool isFound = 0;
 
-	ofstream ramOut;
-	ramOut.open("RAM.txt");
-	Ram.getRam(ram1, ram2, ram3, ram4);
-	ramOut << ram1 << "\n" << ram2 << "\n" << ram3 << "\n" << ram4;
-	ramOut.close();
+				while (!nameIn.eof()) {
+					string showName = "", showSoC = "", showRam = "", showMP = "", showScreen = "", showBattery = "";
+					getline(nameIn, showName);
+					getline(SoCIn, showSoC);
+					getline(ramIn, showRam);
+					getline(MPIn, showMP);
+					getline(screenIn, showScreen);
+					getline(batteryIn, showBattery);
+					for (int i = 0; i < search.size(); i++) {
+						if (showName[i] == search[i]) {
+							isFound = 1;
+						}
+						else {
+							isFound = 0;
+							break;
+						}
+					}
+					if (isFound == 1) {
+						cout << "\nName: ";
+						for (int i = 0; i < showName.size(); i++)
+							cout << showName[i];
+						cout << "\nProcessor: ";
+						for (int i = 0; i < showSoC.size(); i++)
+							cout << showSoC[i];
+						cout << "\nRAM: ";
+						for (int i = 0; i < showRam.size(); i++)
+							cout << showRam[i];
+						cout << "\nScreen Size: ";
+						for (int i = 0; i < showScreen.size(); i++)
+							cout << showScreen[i];
+						cout << "\nBattery: ";
+						for (int i = 0; i < showBattery.size(); i++)
+							cout << showBattery[i];
+						cout << "\nMegaPixels: ";
+						for (int i = 0; i < showMP.size(); i++)
+							cout << showMP[i];
+						cout << "\n";
+						break;
 
-	ofstream screenOut;
-	screenOut.open("ScreenSize.txt");
-	Screen.getScreen(screen1, screen2, screen3, screen4);
-	screenOut << screen1 << "\n" << screen2 << "\n" << screen3 << "\n" << screen4;
-	screenOut.close();
+					}
+				}
 
-	ofstream batteryOut;
-	batteryOut.open("Battery.txt");
-	Battery.getBattery(battery1, battery2, battery3, battery4);
-	batteryOut << battery1 << "\n" << battery2 << "\n" << battery3 << "\n" << battery4;
-	batteryOut.close();
+				if (nameIn.eof() && (!isFound))
+					cout << "\nnot found";
 
-	ofstream MPOut;
-	MPOut.open("MegaPixels.txt");
-	MegaPixels.getMP(MP1, MP2, MP3, MP4);
-	MPOut << MP1 << "\n" << MP2 << "\n" << MP3 << "\n" << MP4;
-	MPOut.close();
-
-	ifstream nameIn, SoCIn, ramIn, screenIn, batteryIn, MPIn;
-
-	nameIn.open("name.txt");
-	SoCIn.open("SoC.txt");
-	ramIn.open("RAM.txt");
-	screenIn.open("ScreenSize.txt");
-	batteryIn.open("Battery.txt");
-	MPIn.open("MegaPixels.txt");
-
-	string search;
-	cout << "Enter the name of the phone: ";
-	cin >> search;
-
-	bool isFound = 0;
-
-	while (!nameIn.eof()) {
-		string showName = "", showSoC = "", showRam = "", showMP = "", showScreen = "", showBattery = "";
-		getline(nameIn, showName);
-		getline(SoCIn, showSoC);
-		getline(ramIn, showRam);
-		getline(MPIn, showMP);
-		getline(screenIn, showScreen);
-		getline(batteryIn, showBattery);
-		for (int i = 0; i < search.size(); i++) {
-			if (showName[i] == search[i]) {
-				isFound = 1;
-			}
-			else {
-				isFound = 0;
+				nameIn.close(); SoCIn.close(); ramIn.close(); screenIn.close(); batteryIn.close(); MPIn.close();
 				break;
 			}
-		}
-		if (isFound == 1) {
-			cout << "\nName: ";
-			for (int i = 0; i < showName.size(); i++)
-				cout << showName[i];
-			cout << "\nProcessor: ";
-			for (int i = 0; i < showSoC.size(); i++)
-				cout << showSoC[i];
-			cout << "\nRAM: ";
-			for (int i = 0; i < showRam.size(); i++)
-				cout << showRam[i];
-			cout << "\nScreen Size: ";
-			for (int i = 0; i < showScreen.size(); i++)
-				cout << showScreen[i];
-			cout << "\nBattery: ";
-			for (int i = 0; i < showBattery.size(); i++)
-				cout << showBattery[i];
-			cout << "\nMegaPixels: ";
-			for (int i = 0; i < showMP.size(); i++)
-				cout << showMP[i];
-			cout << "\n";
+
+		case 2: 
+		{
+				int brand;
+				cout<<"\nChoose from one of the brands listed below. \n1) Apple \n2) Google \n3) OnePlus \n4) Redmi \n5) Samsung"<<endl;
+				cin >> brand;
+				switch(brand) {
+					case 1: 
+					{		
+							cout<<"\nChoose one option:"<<endl;
+							ifstream appleIn;
+							string showApple = " ";
+							appleIn.open("apple.txt");
+							while(!appleIn.eof()) { 
+							getline(appleIn, showApple);
+							cout<<"\n";
+							for (int i = 0; i < showApple.size(); i++)
+								cout << showApple[i];
+
+							}
+							int phone; cin>>phone;
+							switch(phone) {
+								case 1:
+								{
+									ifstream phoneIn;
+									string search = "Name: iPhone 11 Pro Max", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("iPhone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "1") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 2:
+								{
+									ifstream phoneIn;
+									string search = "Name: iPhone 11 Pro", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("iPhone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "2") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+
+								case 3:
+								{
+									ifstream phoneIn;
+									string search = "Name: iPhone 11", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("iPhone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "3") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 4:
+								{
+									ifstream phoneIn;
+									string search = "Name: iPhone XR", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("iPhone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "4") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+								case 5:
+								{
+									ifstream phoneIn;
+									string search = "Name: iPhone X", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("iPhone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "5") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+							}
+							break;
+					}
+					case 2:
+					{		
+							cout<<"\nChoose one option:"<<endl;
+							ifstream googleIn;
+							string showGoogle = " ";
+							googleIn.open("pixel.txt");
+							while(!googleIn.eof()) { 
+							getline(googleIn, showGoogle);
+							cout<<"\n";
+							for (int i = 0; i < showGoogle.size(); i++)
+								cout << showGoogle[i];
+
+							}
+							int phone; cin>>phone;
+							switch(phone) {
+								case 1:
+								{
+									ifstream phoneIn;
+									string search = "Name: Pixel 4A", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("pixelphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "1") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 2:
+								{
+									ifstream phoneIn;
+									string search = "Name: Pixel 4 XL", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("pixelphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "2") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+
+								case 3:
+								{
+									ifstream phoneIn;
+									string search = "Name: Pixel 4", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("pixelphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "3") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 4:
+								{
+									ifstream phoneIn;
+									string search = "Name: Pixel 3A XL", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("pixelphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "4") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+								case 5:
+								{
+									ifstream phoneIn;
+									string search = "Name: Pixel 3A", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("pixelphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "5") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+							}
+							break;
+					}
+					case 3:
+					{		
+							cout<<"\nChoose one option:"<<endl;
+							ifstream opIn;
+							string showOp = " ";
+							opIn.open("oneplus.txt");
+							while(!opIn.eof()) { 
+							getline(opIn, showOp);
+							cout<<"\n";
+							for (int i = 0; i < showOp.size(); i++)
+								cout << showOp[i];
+							cout<<"\n";
+
+							}
+							int phone; cin>>phone;
+							switch(phone) {
+								case 1:
+								{
+									ifstream phoneIn;
+									string search = "Name: OnePlus 7", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("oneplusphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "1") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 2:
+								{
+									ifstream phoneIn;
+									string search = "Name: OnePlus 7 Pro", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("oneplusphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "2") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+
+								case 3:
+								{
+									ifstream phoneIn;
+									string search = "Name: OnePlus 8", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("oneplusphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "3") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 4:
+								{
+									ifstream phoneIn;
+									string search = "Name: OnePlus 8 Pro", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("oneplusphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "4") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+								case 5:
+								{
+									ifstream phoneIn;
+									string search = "Name: OnePlus Nord", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("oneplusphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "5") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+							}
+							break;
+					}
+					case 4:
+					{		
+							cout<<"\nChoose one option:"<<endl;
+							ifstream redmiIn;
+							string showRedmi = " ";
+							redmiIn.open("redmi.txt");
+							while(!redmiIn.eof()) { 
+							getline(redmiIn, showRedmi);
+							cout<<"\n";
+							for (int i = 0; i < showRedmi.size(); i++)
+								cout << showRedmi[i];
+
+							}
+							cout<<"\n";
+							int phone; cin>>phone;
+							switch(phone) {
+								case 1:
+								{
+									ifstream phoneIn;
+									string search = "Name: Redmi 9", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("redmiphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "1") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 2:
+								{
+									ifstream phoneIn;
+									string search = "Name: Redmi 9A", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("redmiphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "2") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+
+								case 3:
+								{
+									ifstream phoneIn;
+									string search = "Name: Redmi note 9", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("redmiphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "3") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 4:
+								{
+									ifstream phoneIn;
+									string search = "Name: Redmi note 9 Pro", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("redmiphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "4") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+								case 5:
+								{
+									ifstream phoneIn;
+									string search = "Name: Redmi note 9 Pro Max", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("redmiphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "5") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+							}
+							break;
+					}
+					case 5:
+					{		
+							cout<<"\nChoose one option:"<<endl;
+							ifstream samIn;
+							string showSam = " ";
+							samIn.open("samsung.txt");
+							while(!samIn.eof()) { 
+							getline(samIn, showSam);
+							cout<<"\n";
+							for (int i = 0; i < showSam.size(); i++)
+								cout << showSam[i];
+
+							}
+							cout<<"\n";
+							int phone; cin>>phone;
+							switch(phone) {
+								case 1:
+								{
+									ifstream phoneIn;
+									string search = "Name: Samsung Galaxy S20", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("samsungphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "1") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 2:
+								{
+									ifstream phoneIn;
+									string search = "Name: Samsung Galaxy S20+", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("samsungphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "2") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+
+								case 3:
+								{
+									ifstream phoneIn;
+									string search = "Name: Samsung Galaxy Z Fold 2", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("samsungphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "3") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i]; 
+											cout<<"\n\n";
+										}
+
+									}
+									break;
+								}
+								case 4:
+								{
+									ifstream phoneIn;
+									string search = "Samsung Galaxy M21", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("samsungphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "4") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+								case 5:
+								{
+									ifstream phoneIn;
+									string search = "Name: Samsung Galaxy A31", showPhone = " ";
+									bool isFound = 0;
+									phoneIn.open("samsungphone.txt");
+									while(!phoneIn.eof()) {
+										getline(phoneIn, showPhone);
+										if(showPhone == search) 
+											isFound = 1;
+										else { 
+											if(showPhone == "5") {
+												isFound = 0;
+												break;
+											}
+										}
+										if(isFound == 1) { 
+											for (int i = 0; i < showPhone.size(); i++)
+												cout << showPhone[i];
+											cout<<"\n\n"; 
+										}
+
+									}
+									break;
+								}
+							}
+							break;
+					}
+
+					default: cout<<"\nWrong choice.";
 			break;
 		}
+		}		
+		//default: cout<<"\nWrong Choice!";
 	}
-
-	if (nameIn.eof() && (!isFound))
-		cout << "\nnot found";
-
-	nameIn.close();
-	SoCIn.close();
-	ramIn.close();
-	screenIn.close();
-	batteryIn.close();
-	MPIn.close();
 
 	return 0;
 }
