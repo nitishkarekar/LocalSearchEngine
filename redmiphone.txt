@@ -12,21 +12,21 @@ Battery: 5000 mAh
 Screen Size: 6.53 inch
 MegaPixel: 13MP
 2
-Name: Redmi note 9
+Name: Redmi Note 9
 Soc:  MediaTek Helio G25
 RAM: 4GB
 Battery: 5020 mAh
 Screen Size: 6.53 inch
 MegaPixel: 48MP
 3
-Name: Redmi note 9 Pro
+Name: Redmi Note 9 Pro
 Soc:  Snapdragon 720G
 RAM: 6GB
 Battery: 5020 mAh
 Screen Size: 6.67 inch
 MegaPixel: 64MP
 4
-Name: Redmi note 9 Pro Max
+Name: Redmi Note 9 Pro Max
 Soc:  Snapdragon 720G
 RAM: 8GB
 Battery: 5020 mAh
