@@ -1,8 +1,15 @@
 #pragma warning(disable : 4996)
 #include<iostream>
 #include<fstream>
-#include <string>
+#include <cstring>
 using namespace std;
+
+void wirteToFile(string fileName, string phone, string soc, string ram, string bat, string ss, string mp) {
+	ofstream fout;
+	fout.open(fileName, ios::app);
+	fout << phone <<"\n"<< soc<<"\n"<<ram<<"\n"<<bat<<"\n"<<ss<<"\n"<<mp;
+	fout << "\nx";
+}
 
 void search_display(string search, string fileName, string end) {
 	string showPhone = " ";
@@ -56,8 +63,8 @@ int main() {
 	{
 		string search;
 		cout << "Enter the name of the phone: ";
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		std::cin.clear();
+  		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		getline(cin, search);
 		search_by_word(search, "allphones.txt");
 		break;
