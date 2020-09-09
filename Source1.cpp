@@ -9,7 +9,38 @@ using namespace std;
 void writeToFile(string fileName, string phone, string soc, string ram, string bat, string ss, string mp, string num) {
 	ofstream fout;
 	fout.open(fileName, ios::app);
-	fout << phone << "\n" << soc << "\n" << ram << "\n" << bat << "\n" << ss << "\n" << mp << "\n" << num;
+	fout << "\n" << phone << "\n" << soc << "\n" << ram << "\n" << bat << "\n" << ss << "\n" << mp << "\n" << num;
+	fout.close();
+}
+
+void addPhone(string allphones, string phonefile, string brandfile) {
+	string phone, soc = "SoC: ",soc1, ram = "Ram: ",ram1, bat="Battery: ",bat1, ss="Screen Size: ", ss1, mp="Megapixel: ",mp1, num;
+	cout << "Name of the Phone: ";
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	getline(cin, phone);
+	cout << "Processor: ";
+	getline(cin, soc1);
+	soc.append(soc1);
+	cout << "RAM: ";
+	cin >> ram1;
+	ram.append(ram1);
+	cout << "Battery: ";
+	cin >> bat1;
+	bat.append(bat1);
+	cout << "Screen size: ";
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	getline(cin, ss1);
+	ss.append(ss1);
+	cout << "MegaPixel: ";
+	cin >> mp1;
+	mp.append(mp1);
+	cout << "Enter the terinating character: ";
+	cin >> num;
+	writeToFile(allphones, phone, soc, ram, bat, ss, mp, "x");
+	writeToFile(phonefile, phone, soc, ram, bat, ss, mp, num);
+	writeToFile(brandfile, phone, "", "", "", "", "", "");
 }
 
 int passCheck() {
@@ -105,10 +136,10 @@ void deletePhone(string search) {
 
 		}
 	}
-	if (remove("allphones.txt") == 0)
-		cout << "\nFile removed successfully.";
-	if (rename("temp.txt", "allphones.txt") != 0)
-		cout << "\nFile renamed successfully.";
+	phoneIn.close();
+	temp.close();
+	remove("allphones.txt");
+	rename("temp.txt", "allphones.txt");
 }
 
 int main() {
@@ -123,7 +154,7 @@ int main() {
 		} while (chk != 1);
 	}
 	if (chk == 1) {
-		cout << "\nSelect 1 or 2: \n1)Search by name \n2)Search by brand \n3)Deletion" << endl;
+		cout << "\nSelect 1 or 2: \n1)Search by name \n2)Search by brand \n3)Deletion \n4)Add Phone" << endl;
 		cin >> ch;
 	}
 	else {
@@ -321,6 +352,27 @@ int main() {
 		if (ch == 'Y' || ch == 'y') {
 			deletePhone(st_del);
 			cout << "\nPhone deleted successfully!";
+		}
+		break;
+	}
+	case 4:
+	{
+		int phone;
+		cout << "\nWhich brand does the phone belong to?\n1) Apple \n2) Google \n3) OnePlus \n4) Redmi \n5) Smasung"<<endl;
+		cin >> phone;
+		switch (phone)
+		{
+		case 1: addPhone("allphones.txt", "iPhone.txt", "apple.txt");
+			break;
+		case 2: addPhone("allphones.txt", "pixelphone.txt", "pixel.txt");
+			break;
+		case 3: addPhone("allphones.txt", "oneplusphone.txt", "oneplus.txt");
+			break;
+		case 4: addPhone("allphones.txt", "redmiphone.txt", "redmi.txt");
+			break;
+		case 5: addPhone("allphones.txt", "samsungphone.txt", "samsung.txt");
+			break;
+		default: cout << "\nWrong Choice!";
 		}
 		break;
 	}

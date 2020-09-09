@@ -173,3 +173,17 @@ Battery: 5000mAh
 Screen Size: 6.4 inch
 MegaPixel: 48MP
 x
+iPhone 12
+SoC: A14 Bionic
+Ram: 4GB
+Battery: 3500mAH
+Screen Size: 5.4 Inches
+Megapixel: 12MP
+x
+iPhone 12
+SoC: A14 Bionic
+Ram: 4GB
+Battery: 3500mAH
+Screen Size: 5.4 Inches
+Megapixel: 12MP
+x
