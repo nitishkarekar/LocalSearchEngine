@@ -4,39 +4,32 @@ RAM: 4GB
 Battery: 3000mAh
 Screen size: 6.52 inch
 MegaPixel: 12MP
-1
+x
 iPhone 11 Pro
 Soc: A13 Bionic
 RAM: 4GB
 Battery: 3046mAh
 Screen size: 5.8 inch
 MegaPixel: 12MP
-2
+x
 iPhone 11
 Soc: A13 Bionic
 RAM: 4GB
 Battery: 3110mAh
 Screen Size: 6.1 inch
 MegaPixel: 12MP
-3
+x
 iPhone XR
 Soc: A12 Bionic
 RAM: 3GB
 Battery: 2942mAh
 Screen Size: 6.1 inch
 MegaPixel: 12MP
-4
+x
 iPhone X
 Soc: A11 Bionic
 RAM: 3GB
 Battery: 2716mAh
 Screen Size: 5.8 inch
 MegaPixel: 12MP
-5
-iPhone 12
-SoC: A14 Bionic
-Ram: 4GB
-Battery: 3500mAH
-Screen Size: 5.4 Inches
-Megapixel: 12MP
-6
+x

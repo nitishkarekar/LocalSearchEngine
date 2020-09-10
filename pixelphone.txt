@@ -4,32 +4,32 @@ RAM: 6GB
 Battery: 3140mAh 
 Screen Size: 5.81 inch
 MegaPixel: 12MP
-1
+x
 Pixel 4 XL
 Soc: Snapdragon 855
 RAM: 6GB
 Battery: 3700mAh 
 Screen Size: 6.3 inch
 MegaPixel: 16MP
-2
+x
 Pixel 4
 Soc: Snapdragon 855
 RAM: 6GB
 Battery: 2800mAh 
 Screen Size: 5.7 inch
 MegaPixel: 16MP
-3
+x
 Pixel 3A XL
 Soc: Snapdragon 845
 RAM: 4GB
 Battery: 3430mAh 
 Screen Size: 6.3 inch
 MegaPixel: 12MP
-4
+x
 Pixel 3A
 Soc: Snapdragon 670
 RAM: 4GB
 Battery: 3000mAh 
 Screen Size: 5.6 inch
 MegaPixel: 12MP
-5
+x
