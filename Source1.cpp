@@ -121,7 +121,7 @@ void deletePhone(string search, string phonefile, string brandfile) {
 	temp3.close();
 	remove("allphones.txt");
 	if (rename("temp3.txt", "allphones.txt") == 0)
-		cout << "\nFile renamed.";
+		cout << "\n";
 
 	temp2.open("temp2.txt", ios::app);
 	isFound = 0;
@@ -133,15 +133,14 @@ void deletePhone(string search, string phonefile, string brandfile) {
 			isFound = 0;
 		}
 		if (isFound == 0) {
-			temp3 << showPhone << "\n";		
+			temp2 << showPhone << "\n";		
 		}
-		cout << "\nStill in while";
 	}
 	phoneIn.close();
 	temp2.close();
 	remove(phone);
 	if (rename("temp2.txt", phone) == 0)
-		cout << "\nFile renamed.";
+		cout << "\n";
 
 	temp1.open("temp1.txt", ios::app);
 	isFound = 0;
@@ -153,15 +152,14 @@ void deletePhone(string search, string phonefile, string brandfile) {
 		else
 			isFound = 0;
 		if (isFound == 0) {
-			temp3 << showPhone;
+			temp1 << showPhone << "\n";
 		}
-		cout << "\nStill in while brand.";
 	}
 	brandIn.close();
 	temp1.close();
 	remove(brand);
 	if (rename("temp1.txt", brand) == 0)
-		cout << "\nFile renamed.";
+		cout << "\n";
 }
 
 int main() {
@@ -380,23 +378,23 @@ int main() {
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		getline(cin, st_del);
 		for (int i = 0; i < 5; i++) {
-			if (st_del[i] == 'iPho') {
+			if (st_del[i] == 'i') {
 				phonefile = "iPhone.txt";
 				brandfile = "apple.txt";
 			}
-			else if (st_del[i] == 'Pixe') {
+			else if (st_del[i] == 'P') {
 				phonefile == "pixelphone.txt";
 				brandfile = "pixel.txt";
 			}
-			else if (st_del[i] == 'OneP') {
+			else if (st_del[i] == 'O') {
 				phonefile = "oneplusphone.txt";
 				brandfile = "oneplus.txt";
 			}
-			else if (st_del[i] == 'Redm') {
+			else if (st_del[i] == 'R') {
 				phonefile = "redmiphone.txt";
 				brandfile = "redmi.txt";
 			}
-			else if (st_del[i] == 'Sams') {
+			else if (st_del[i] == 'S') {
 				phonefile = "samsungphone.txt";
 				brandfile = "samsung.txt";
 			}
@@ -405,9 +403,13 @@ int main() {
 			if (ch == 'Y' || ch == 'y') {
 				deletePhone(st_del, phonefile, brandfile);
 				cout << "\nPhone deleted successfully!";
+				break;
 			}
-			break;
+			else {
+				return 0;
+			}
 		}
+		break;
 	}
 	case 4:
 	{
