@@ -4,6 +4,7 @@ RAM: 4GB
 Battery: 3000mAh
 Screen size: 6.52 inch
 MegaPixel: 12MP
+Price: Rs.1,00,000
 x
 iPhone 11 Pro
 Soc: A13 Bionic
@@ -11,6 +12,7 @@ RAM: 4GB
 Battery: 3046mAh
 Screen size: 5.8 inch
 MegaPixel: 12MP
+Price: Rs.99,990
 x
 iPhone 11
 Soc: A13 Bionic
@@ -18,6 +20,7 @@ RAM: 4GB
 Battery: 3110mAh
 Screen Size: 6.1 inch
 MegaPixel: 12MP
+Price: Rs.65,000
 x
 iPhone XR
 Soc: A12 Bionic
@@ -25,6 +28,7 @@ RAM: 3GB
 Battery: 2942mAh
 Screen Size: 6.1 inch
 MegaPixel: 12MP
+Price: Rs.76,000
 x
 iPhone X
 Soc: A11 Bionic
@@ -32,4 +36,5 @@ RAM: 3GB
 Battery: 2716mAh
 Screen Size: 5.8 inch
 MegaPixel: 12MP
+Price: Rs.89,990
 x
