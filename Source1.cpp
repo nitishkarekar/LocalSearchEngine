@@ -2,7 +2,8 @@
 #include<iostream>
 #include<conio.h>
 #include<fstream>
-#include<string>
+#include<cstring>
+#include<limits>
 using namespace std;
 
 void writeToFile(string fileName, string phone, string soc, string ram, string bat, string ss, string mp, string price, string num) {
@@ -45,11 +46,12 @@ void searchPhone(string search, string fileName, bool showRelatedPhones) {
 				searchPhone(relatedPhone, file, false);
 			}
 			else {
+				cout << "\n";
 				for (int i = 0; i < showPhone.size(); i++) {
 					cout << showPhone[i];
 				}
 			}
-			cout << "\n\n";
+			cout << "\n";
 		}
 	}
 	if (isFound == 0) {
@@ -557,5 +559,8 @@ int main() {
 	}
 	default: cout << "\nWrong Choice!";
 	}
+	cout << "\n" << "Enter any key to exit.";
+	getchar();
+	getchar();
 	return 0;
 }
