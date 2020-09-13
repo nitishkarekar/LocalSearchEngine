@@ -1,0 +1,214 @@
+iPhone 11 Pro Max
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3000mAh
+Screen size: 6.52 inch
+MegaPixel: 12MP
+Price: Rs.1,00,000
+x
+iPhone 11 Pro
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3046mAh
+Screen size: 5.8 inch
+MegaPixel: 12MP
+Price: Rs.99,990
+x
+iPhone 11
+Soc: A13 Bionic
+RAM: 4GB
+Battery: 3110mAh
+Screen Size: 6.1 inch
+MegaPixel: 12MP
+Price: Rs.65,000
+x
+iPhone XR
+Soc: A12 Bionic
+RAM: 3GB
+Battery: 2942mAh
+Screen Size: 6.1 inch
+MegaPixel: 12MP
+Price: Rs.76,000
+x
+iPhone X
+Soc: A11 Bionic
+RAM: 3GB
+Battery: 2716mAh
+Screen Size: 5.8 inch
+MegaPixel: 12MP
+Price: Rs.89,990
+x
+OnePlus 7
+Soc: Snapdragon 855
+RAM: 8GB
+Battery: 3700mAh
+Screen Size: 6.41 inch
+MegaPixel: 48MP
+Price: Rs.33,000
+x
+OnePlus 7 Pro
+Soc: Snapdragon 855
+RAM: 12GB
+Battery: 4000mAh
+Screen Size: 6.67 inch
+MegaPixel: 48MP
+Price:Rs.39,999
+x
+OnePlus 8
+Soc: Snapdragon 865
+RAM: 12GB
+Battery: 4300mAh
+Screen Size: 6.55 inch
+MegaPixel: 48MP
+Price: Rs.42,000
+x
+OnePlus 8 Pro
+Soc: Snapdragon 865
+RAM: 12GB
+Battery: 4510mAh
+Screen Size: 6.78 inch
+MegaPixel: 48MP
+Price: Rs.55,000
+x
+OnePlus Nord
+Soc: Snapdragon 765G
+RAM: 12GB
+Battery: 4115mAh
+Screen Size: 6.44 inch
+MegaPixel: 48MP
+Price: Rs.25,000
+x
+Pixel 4A
+Soc: Snapdragon 730G
+RAM: 6GB
+Battery: 3140mAh 
+Screen Size: 5.81 inch
+MegaPixel: 12MP
+x
+Pixel 4 XL
+Soc: Snapdragon 855
+RAM: 6GB
+Battery: 3700mAh 
+Screen Size: 6.3 inch
+MegaPixel: 16MP
+x
+Pixel 4A
+Soc: Snapdragon 730G
+RAM: 6GB
+Battery: 3140mAh 
+Screen Size: 5.81 inch
+MegaPixel: 12MP
+Price: Rs.30,000
+x
+Pixel 4 XL
+Soc: Snapdragon 855
+RAM: 6GB
+Battery: 3700mAh 
+Screen Size: 6.3 inch
+MegaPixel: 16MP
+Price: Rs.90,000
+x
+Pixel 4
+Soc: Snapdragon 855
+RAM: 6GB
+Battery: 2800mAh 
+Screen Size: 5.7 inch
+MegaPixel: 16MP
+Price: Rs.80,000
+x
+Pixel 3A XL
+Soc: Snapdragon 845
+RAM: 4GB
+Battery: 3430mAh 
+Screen Size: 6.3 inch
+MegaPixel: 12MP
+Price: Rs.35,000
+x
+Pixel 3A
+Soc: Snapdragon 670
+RAM: 4GB
+Battery: 3000mAh 
+Screen Size: 5.6 inch
+MegaPixel: 12MP
+Price: Rs.30,000
+x
+Redmi 9
+Soc: Helio G80
+RAM: 6GB
+Battery: 5020 mAh
+Screen Size: 6.53 inch
+MegaPixel: 13MP
+Price: Rs.9,000
+x
+Redmi 9A
+Soc: MediaTek Helio G25
+RAM: 3GB
+Battery: 5000 mAh
+Screen Size: 6.53 inch
+MegaPixel: 13MP
+Price: Rs.8,000
+x
+Redmi Note 9
+Soc:  MediaTek Helio G25
+RAM: 4GB
+Battery: 5020 mAh
+Screen Size: 6.53 inch
+MegaPixel: 48MP
+Price: Rs.11,000
+x
+Redmi Note 9 Pro
+Soc:  Snapdragon 720G
+RAM: 6GB
+Battery: 5020 mAh
+Screen Size: 6.67 inch
+MegaPixel: 64MP
+Price: Rs.14,000
+x
+Redmi Note 9 Pro Max
+Soc:  Snapdragon 720G
+RAM: 8GB
+Battery: 5020 mAh
+Screen Size: 6.67 inch
+MegaPixel: 64MP
+Price: Rs.20,000
+x
+Samsung Galaxy S20
+Soc: Exynos 990
+RAM: 8GB
+Battery: 4000mAh 
+Screen Size: 6.2 inch
+MegaPixel: 64MP
+Price: Rs.70,000
+x
+Samsung Galaxy S20+
+Soc: Exynos 990
+RAM: 8GB
+Battery: 4500mAh 
+Screen Size: 6.7 inch
+MegaPixel: 64MP
+Price: Rs.76,000
+x
+Samsung Galaxy Z Fold 2
+Soc: Snapdragon 865+
+RAM: 12GB
+Battery: 4500mAh 
+Screen Size: 7.6 inch
+MegaPixel: 12MP
+Price: Rs.1,49,000
+x
+Samsung Galaxy M21
+Soc: Exynos 9611
+RAM: 6GB
+Battery: 6000mAh 
+Screen Size: 6.4 inch
+MegaPixel: 48MP
+Price: Rs.15,000
+x
+Samsung Galaxy A31
+Soc: Helio P65
+RAM: 6GB
+Battery: 5000mAh 
+Screen Size: 6.4 inch
+MegaPixel: 48MP
+Price: Rs.13,000
+x
